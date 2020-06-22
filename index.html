@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Formzinho</title>
+
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+        <header>
+            <h1>Formulário de admissão CaTeus&#169;</h1>
+        </header>
+        <form id="form">
+            <fieldset class="form">
+                <legend>Formulário de admissão</legend>
+                <label for="name">Nome:</label><br>
+                <input id="name" required/><br><br>
+                <label for="email">E-mail:</label><br>
+                <input id="email" type="text" placeholder="nome@gmail.com" required/><br><br>
+                <label for="cpf">CPF:</label><br>
+                <input id="cpf" type="number" placeholder="XXX.XXX.XXX-XX" required/><br><br>
+                <label for="tel">Telefone:</label><br>
+                <input id="tel" type="text" placeholder="(XX)XXXXX-XXXX"/><br>
+                <br>Sexo:<br>
+                <label for="homem">Homem</label>
+                <input type="radio" name="genero" id="homem" value="homem"><br>
+                <label for="mulher">Mulher</label>
+                <input type="radio" name="genero" id="mulher" value="mulher"><br>
+                <label for="outros">Outros</label>
+                <input type="radio" name="genero" id="outros" value="outros"><br><br>
+
+                <label for="area">Escolha a área:</label>
+
+                <select name="area" id="area" onmouseout=showcamp() required>
+                        <option value="no">Selecione uma opção</option>
+                        <option id="adm" value="no">Administração</option>
+                        <option id="ti" value="yes">TI</option>
+                        <option id="vendas" value="no">Vendas</option>
+                        <option id="mkt" value="no">Marketing</option>
+                </select><br><br>
+
+                <div id="conhecimentos" style="display:none">
+                <label for="adendos">Conhecimentos:</label><br>
+                <textarea id="adendos"></textarea><br><br>
+                </div>
+
+                <label for="myfile">Insira seu RG (página da foto):</label><br><br>
+                <input type="file" id="myfile" name="myfile" required/><br><br><br>
+
+                <section>
+                    <label for="inputSal">Salário bruto:</label><br>
+                    <input id="inputSal" type="text"/><br><br>
+                    
+                    <label for="salarioCalc">Salário líquido calculado:</label>
+                    <input id="salarioCalc" type="readonly" placeholder="Cálculo do salário líquido" readonly=calculaLiq()>
+                </section>
+
+                <button id="enviaForm">Enviar</button><br><br><br>
+
+                <button id="limpaForm">Limpar</button>
+
+                <!--<section>
+                    <label for="inputSal">Salário bruto:</label><br>
+                    <input id="inputSal" type="text"/><br><br>
+                    <input type="submit" id="botaoCalc" value="Calcular"><br><br>
+
+                    <label for="salarioCalc">Salário líquido calculado:</label>
+                    <input id="salarioCalc" type="readonly" placeholder="Cálculo do salário líquido" readonly=calculaLiq()>
+                    
+                </section>-->
+
+                
+
+            </fieldset>
+        </form>
+    </body>
+
+<script src="js/form.js"></script>
+
+
+
+
+</html>
